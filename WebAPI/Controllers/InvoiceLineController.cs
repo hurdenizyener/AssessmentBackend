@@ -1,5 +1,4 @@
 ﻿using Business.Abstract;
-using Entities.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -16,7 +15,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAllAsync(string invoiceId)
+        public async Task<IActionResult> GetAllAsync([FromQuery]string invoiceId)
         {
             var result = await _invoiceLineService.GetAllAsync(invoiceId);
 
@@ -24,14 +23,5 @@ namespace WebAPI.Controllers
 
         }
 
-
-        //[HttpPost("Add")]
-        //public async Task<IActionResult> AddAsync(InvoiceLine ınvoiceLine)
-        //{
-        //     await _invoiceLineService.AddAsync(ınvoiceLine);
-
-        //    return Ok("Ürün Eklendi");
-
-        //}
     }
 }

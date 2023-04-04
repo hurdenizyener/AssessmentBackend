@@ -6,6 +6,5 @@ namespace Business.Abstract
     {
         Task<List<InvoiceHeader>> GetAllAsync();
         Task<InvoiceHeader> AddAsync(InvoiceHeader invoiceHeader);
-        Task<InvoiceHeader> GetAsyncById(string id);
     }
 }

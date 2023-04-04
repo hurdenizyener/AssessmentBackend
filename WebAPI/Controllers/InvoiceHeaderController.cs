@@ -23,17 +23,6 @@ namespace WebAPI.Controllers
             return Ok(result);
 
         }
-
-
-        //[HttpPost("Add")]
-        //public async Task<IActionResult> AddAsync(InvoiceHeader invoiceHeader)
-        //{
-        //    var result = await _invoiceHeaderService.AddAsync(invoiceHeader);
-
-        //    return Ok("Fatura Eklendi");
-
-        //}
-
-      
+    
     }
 }

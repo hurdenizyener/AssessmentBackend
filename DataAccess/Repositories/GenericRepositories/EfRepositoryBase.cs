@@ -16,7 +16,6 @@ namespace DataAccess.Repositories.GenericRepositories
             Context = context;
         }
 
-
         public async Task<TEntity> AddAsync(TEntity entity)
         {
             Context.Entry(entity).State = EntityState.Added;
@@ -29,9 +28,5 @@ namespace DataAccess.Repositories.GenericRepositories
             return predicate != null ? await Context.Set<TEntity>().Where(predicate).ToListAsync() : await Context.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate)
-        {
-            return await Context.Set<TEntity>().FirstOrDefaultAsync(predicate);
-        }
     }
 }
